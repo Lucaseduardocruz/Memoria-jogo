@@ -6,6 +6,7 @@ let hour = 0;
 let minute = 0;
 let second = 0;
 let millisecond = 0;
+let totalAcertos = 0;
 
 let cron;
 
@@ -80,11 +81,14 @@ function virarCarta(){
 function checarIguais() {
   if (primeiraCarta.dataset.framework === segundaCarta.dataset.framework){
     disabilitarCarta();
-    alert("Parabéns! Você encontrou um par.");
+    totalAcertos++;
+    if(totalAcertos == 6) {
+      alert("Parabéns! Você ganhou o jogo!");
+    }
     return;
   }
   voltarCartas();
-  alert("Não foi dessa vez! Tente novamente.");
+  // alert("Não foi dessa vez! Tente novamente.");
 }
 
 function disabilitarCarta() {
