@@ -88,7 +88,6 @@ function checarIguais() {
     return;
   }
   voltarCartas();
-  // alert("Não foi dessa vez! Tente novamente.");
 }
 
 function disabilitarCarta() {
